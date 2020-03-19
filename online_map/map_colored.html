@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Переход на дистанционный режим</title>
+  <!--<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Droid+Sans'><link rel="stylesheet" href="./style.css">-->
+  <style>
+    body {
+      background-color: #FFFFFF;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Droid Sans', sans-serif;
+    }
+    body:before {
+      content: '';
+      position: fixed;
+      top: 0px;
+      left: 50%;
+      bottom: 0px;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 4px;
+      background-color: #0C5BB0;
+    }
+    body .entries {
+      width: calc(100% - 80px);
+      max-width: 75%;
+      margin: auto;
+      position: relative;
+      left: -5px;
+    }
+    body .entries .entry {
+      width: calc(50% - 80px);
+      float: left;
+      padding: 20px;
+      clear: both;
+      text-align: right;
+    }
+    body .entries .entry:not(:first-child) {
+      margin-top: -60px;
+    }
+    body .entries .entry .title {
+      font-size: 32px;
+      margin-bottom: 12px;
+      position: relative;
+      color: #0C5BB0;
+    }
+    body .entries .entry .title:before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border: 4px solid #0C5BB0;
+      background-color: #FFFFFF;
+      border-radius: 100%;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      right: -73px;
+      z-index: 1000;
+    }
+    body .entries .entry .title.big:before {
+      width: 24px;
+      height: 24px;
+      -webkit-transform: translate(8px, -50%);
+              transform: translate(8px, -50%);
+    }
+    body .entries .entry .body {
+      color: #505050;
+    }
+    body .entries .entry .body p {
+      line-height: 1.4em;
+    }
+    body .entries .entry:nth-child(2n) {
+      text-align: left;
+      float: right;
+    }
+    body .entries .entry:nth-child(2n) .title:before {
+      left: -63px;
+    }
+    body .entries .entry:nth-child(2n) .title.big:before {
+      -webkit-transform: translate(-8px, -50%);
+              transform: translate(-8px, -50%);
+    }
+
+    input[id^="spoiler"]{
+     display: none;
+    }
+    input[id^="spoiler"] + label {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+      padding: 5px 20px;
+      color: #b91226;
+      text-align: center;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all .6s;
+      margin-top: 25px;
+      border: 1px solid #b91226;
+      background-color: #ffc900;
+    }
+
+    input[id^="spoiler"] ~ .spoiler {
+      width: 90%;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin: 10px auto 0; 
+      padding: 10px; 
+      border: 2px solid #FA6B09;
+      border-radius: 8px;
+      transition: all .6s;
+      margin-top: 25px;
+    }
+    input[id^="spoiler"]:checked + label + .spoiler{
+      height: auto;
+      opacity: 1;
+      padding: 10px;
+    }
+
+    table.spoiler-options{
+      text-align: center;
+      color: #505050;
+    }
+    .th {
+      text-align: center !important;
+      font-weight: bold;
+    }
+
+    li {
+      text-align: left;
+    }
+
+    td {
+      padding: 15px;
+    }
+    td.table-half{
+      width: 50%; 
+      vertical-align: top;
+      padding: 15px;
+    }
+
+    .left-aligned{
+      text-align: left;
+    }
+
+    .small-title{
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0C5BB0;
+    }
+
+    p.nb{
+      color: #EE0011;
+    }
+  </style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="entries">
+  <div class="entry">
+    <div class="title">1 Готовим курс</div>
+    <div class="body">
+        <input type="checkbox"  id="spoiler" /> 
+        <label for="spoiler" >Делаем курс сами</label>
+        <div class="spoiler">
+          <table class="spoiler-options">
+            <tr>
+              <td class="table-half">
+              <p class="small-title" style="color: #15983D;">Преимущества</p>
+              <p>можно гибко строить и дорабатывать курс</p>
+              <p>часть лекций можно не оцифровывать, а заменить веб-трансляцией, это привычная преподавательская деятельность, только в новом формате</p>
+            </td>
+            <td class="table-half">
+              <p class="small-title" style="color: #EE0011;">Недостатки</p>
+              <p>нужно уметь создавать цифровые образовательные ресурсы, работать в приложениях</p>
+              <p>нужно достаточно много времени для разработки учебных материалов, тестов, памяток, объявлений и потом сопровождения активностей студентов в курсе</p>
+            </td>
+          </tr>
+        </table>
+        </div>
+        
+        <input type="checkbox"  id="spoiler2" /> 
+        <label for="spoiler2">Используем готовый МООС</label>
+        <div class="spoiler">
+          <table class="spoiler-options">
+            <tr>
+              <td class="table-half">
+              <p class="small-title" style="color: #15983D;">Преимущества</p>
+              <p>не нужно тратить силы и ресурсы на создание контента и оценочных средств, контент уже прошел экспертизу качества</p>
+              <p>учебная активность студентов задана курсом, техническая поддержка студентов обеспечивается платформой</p>
+            </td>
+            <td class="table-half">
+              <p class="small-title" style="color: #EE0011;">Недостатки</p>
+              <p>нужно адаптировать свои вебинары / консультации под логику тематического плана МООС</p>
+              <p>по теме вашего курса доступных МООС может не быть</p>
+            </td>
+          </tr>
+        </table>
+          <p class="nb">! Обратите внимание: можно использовать МООС на разных платформах: НПОО, Coursera, stepik и т.п.</p>
+        </div>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="title">2 Планируем дистанционное преподавание</div>
+    <div class="body">
+        <input type="checkbox"  id="spoiler10" /> 
+      <label for="spoiler10">Действия и результаты</label>
+      <div class="spoiler">
+            <input type="checkbox"  id="spoiler10-1" /> 
+            <label for="spoiler10-1">Площадка</label>
+            <div class="spoiler">
+              <p>Определяем площадку для взаимодействия со студентами – где будем выкладывать материалы, делать объявления, сообщать оценки</p>
+              <p>Только LMS или LMS для аккумулирования + иные системы для фактической деятельности</p>
+            </div>
+            <input type="checkbox"  id="spoiler10-2" /> 
+            <label for="spoiler10-2">План и дедлайны</label>
+            <div class="spoiler">
+              <p>Определяем тематический план курса (по неделям) и список дедлайнов</p>
+              <p>Горизонт планирования по крайней мере две недели</p>
+            </div>
+            <input type="checkbox"  id="spoiler10-3" /> 
+            <label for="spoiler10-3">Элементы контроля</label>
+            <div class="spoiler">
+              <p>Корректируем систему оценивания по каждой теме</p>
+              <p>Вопросы и/или результаты работы работы студента (эссе, проекты и прочее) по итогам каждой недели, на которые должен предоставить студент</p>
+            </div>
+            <input type="checkbox"  id="spoiler10-4" /> 
+            <label for="spoiler10-4">Изменения в ПУД</label>
+            <div class="spoiler">
+              <p>Решаем, какие именно учебные материалы должны быть в каждой неделе курса</p>
+              <p>Решение : будет «живая» (вебинар) или записанная видеолекция, какие необходимы тексты, схемы, рисунки, тесты.</p>
+              <p>Если используем МООС – будут ли доп. материалы или будет достаточно консультаций</p>
+            </div>
+            <input type="checkbox"  id="spoiler10-6" /> 
+            <label for="spoiler10-6">Список материалов</label>
+            <div class="spoiler">
+              <p>Продумываем список организационных материалов</p>
+              <p>Тексты писем/ объявлений студентам – приветствие, правила работы, система оценивания, ссылка на  график дедлайнов. Это правильно делать еженедельно</p>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="title big">3 Проводим занятия</div>
+    <div class="body">
+        <input type="checkbox"  id="spoiler4" /> 
+        <label for="spoiler4" >Используем интерактивные лекции</label>
+        <div class="spoiler">
+          <p>Проходят в реальном времени, т.е. студенты должны быть в это же время в сети, чтобы иметь возможность задавать вопросы и участвовать в обсуждении</p>
+          <table class="spoiler-options">
+            <tr>
+              <td>Инструменты для трансляции интерактивных лекций, консультаций</td>
+              <td>
+                <ul>
+                  <li><a href="https://webinar.ru/" target="_blank">Webinar.ru</a></li>
+                  <li><a href="https://www.microsoft.com/ru-ru/education/products/teams" target="_blank">MS Teams</li>
+                  <li><a href="https://zoom.us/" target="_blank">Zoom</li>
+                </td>
+            </tr>
+            <tr>
+              <td>Форматы работы</td>
+              <td>Из дома или из оборудованной для вебинаров аудитории в кампусе с тех. поддержкой университета</td>
+            </tr>
+            <tr>
+              <td>Организация работы</td>
+              <td>Время трансляций (когда вы в сети и студенты тоже) должно быть согласовано с учебным офисом, чтобы избежать накладок в расписании</td>
+            </tr>
+          </table>
+        </div>
+        
+        <input type="checkbox"  id="spoiler5" /> 
+        <label for="spoiler5">Используем видеозаписи лекций, размещенные в LMS</label>
+        <div class="spoiler">
+          <p>Видеозаписи лекций размещаются по ссылке в LMS, чтобы обеспечить к ним доступ студентов</p>
+          <table class="spoiler-options">
+            <tr>
+              <td>Инструменты для cамостоятельной записи лекций и инструкций</td>
+              <td>
+                <ul>
+                  <li><a href="https://www.bandicam.com/ru/" target="_blank">Bandicam</a></li>
+                  <li><a href="https://camstudio.org/" target="_blank">CamStudio</a></li>
+                  <li>Видеокамера телефона</li>
+                </td>
+            </tr>
+            <tr>
+              <td>Правила размещения самостоятельно записанных лекций и инструкций</td>
+              <td>Видео размещается на YouTube или VK<br>В LMS размещаются ссылки на видео, само видео в LMS не загружается</td>
+            </tr>
+            <tr>
+              <td>Организация работы</td>
+              <td>Время трансляций (когда вы в сети и студенты тоже) должно быть согласовано с учебным офисом, чтобы избежать накладок в расписании</td>
+            </tr>
+          </table>
+        </div>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="title">4 Создаем учебные материалы</div>
+    <div class="body">
+      <p>! Кроме видеоматериалов рекомендуется разработать другие учебные материалы, как минимум – тестовые и проверочные задания. <br> LMS имеет внутреннюю систему тестирования, которая гибко настраивается. <br>Однако вы можете использовать и другие ресурсы. Перечень ресурсов и ссылка на инструкции по их использованию ниже</p>
+      <input type="checkbox"  id="spoiler6" /> 
+      <label for="spoiler6">Действия и результаты</label>
+      <div class="spoiler">
+            <input type="checkbox"  id="spoiler6-1" /> 
+            <label for="spoiler6-1">Оцифровка готовых материалов, подготовка ридеров</label>
+            <div class="spoiler">
+              <ul>
+                <li>Сканер</li>
+                <li>Фотокамера в телефоне</li>
+                <li>Фотоаппарат</li>
+              </ul>
+            </div>
+            <input type="checkbox"  id="spoiler6-2" /> 
+            <label for="spoiler6-2">Видеозапись лекций, инструкций</label>
+            <div class="spoiler">
+              <p>Видеофайлы разместить в: </p>
+              <ul>
+                <li>Youtube</li>
+                <li>LMS</li>
+                <li>социальных сетях</li>
+              </ul>
+            </div>
+            <input type="checkbox"  id="spoiler6-3" /> 
+            <label for="spoiler6-3">Интерактивная лекция, консультация</label>
+            <div class="spoiler">
+              <ul>
+                <li><a href="https://webinar.ru/" target="_blank">Webinar.ru</a></li>
+                <li><a href="https://www.microsoft.com/ru-ru/education/products/teams" target="_blank">MS Teams</li>
+                <li><a href="https://zoom.us/" target="_blank">Zoom</a></li>
+                <li><a href="https://www.skype.com/ru/" target="_blank">Skype</a></li>
+                <li><a href="https://www.cisco.com/c/ru_ru/products/conferencing/index.html" target="_blank">Cisco Webex</a></li>
+              </ul>
+            </div>
+            <input type="checkbox"  id="spoiler6-4" /> 
+            <label for="spoiler6-4">Проверочные задания и тесты</label>
+            <div class="spoiler">
+              <ul>
+                <li>Система тестирования LMS</li>
+                <li><a href="https://classroom.google.com/" target="_blank">Google Classroom</a></li>
+                <li>Google Формы</li>
+                <li><a href="https://quizizz.com/" target="_blank">Quizizz</a></li>
+              </ul>
+            </div>
+            <input type="checkbox"  id="spoiler6-6" /> 
+            <label for="spoiler6-6">График консультаций, дедлайны по темам и контрольным работам</label>
+            <div class="spoiler">
+              <ul>
+                <li>Google doc</li>
+                <li>закрытая группа в социальных сетях</li>
+                <li>внутренние объявления LMS</li>
+              </ul>
+            </div>
+      </div>
+    </div>
+  </div>
+  <div class="entry">
+    <div class="title">5 Размещаем учебные материалы</div>
+    <div class="body">
+      <!--<input type="checkbox"  id="spoiler4" /> 
+      <label for="spoiler4" >Используем интерактивные лекции</label>
+      <div class="spoiler">
+      </div>-->
+      <p>Для того, чтобы завершить создание курса, необходимо опубликовать все созданные материалы в среде, где они будут доступны студентам для работы</p>
+      <input type="checkbox"  id="spoiler8" /> 
+      <label for="spoiler8">Порядок действий</label>
+      <div class="left-aligned spoiler">
+        <ol>
+        <li>Регистрируемся в LMS</li>
+        <li>Получаем доступ к пустому сайту дисциплины</li>
+        <li>Создаем структуру курса в соответствии с тематическим планом</li>
+        <li>Оцифрованные материалы загружаем в медиахранилище</li>
+        <li>Размещаем ссылку на видеоматериалы</li>
+        <li>Размещаем объявление</li>
+        <li>Настраиваем тесты</li>
+      </ol>
+      <p><b>Пояснение:</b></p>
+      <p>Все преподаватели НИУ ВШЭ по умолчанию зарегистрированы в LMS. Каждый преподаватель по умолчанию подключен к дисциплинам учебного плана, которые включены в его нагрузку, и которые он может наполнять учебными материалами.</p>
+      <p>Если вы не знаете своего логина и пароля для входа в систему – необходимо написать письмо на lms@ hse.ru Зайти также можно через ЕЛК. Инструкции по работе с системой размещены здесь </p>
+      </div>
+      
+    </div>
+  </div>
+  <div class="entry">
+    <div class="title big">6 Начинаем учить студентов</div>
+    <div class="body">
+      <p>Когда вы заполните сайт дисциплины, студенты это увидят. </p>
+      <p>Не лишним будет направить письмо-приветствие с объяснением правил работы в дисциплине, списком дедлайнов и описанием ближайших учебных мероприятий (через объявление в LMS письмо уходит всем студентам этой дисциплины автоматически).</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
