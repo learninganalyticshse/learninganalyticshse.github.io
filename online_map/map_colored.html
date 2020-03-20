@@ -191,6 +191,8 @@
 
     hr {
       border-style: dashed;
+      padding-left: 30px;
+      padding-right: 30px;
     }
 
     .only-option-line{
@@ -200,6 +202,20 @@
 
     .second-level{
       border-color: #149BED !important;
+    }
+
+    .plus-minus{
+      text-align: center;
+    }
+    @media (min-width: 992px) {
+      .col-md-6 {
+        width: 50%;
+        float: left;
+        text-align: center;
+      }
+    }
+    .hr-half{
+      width: 60%;
     }
   </style>
 </head>
@@ -212,50 +228,46 @@
         <input type="checkbox"  id="spoiler" /> 
         <label for="spoiler" >Делаем курс сами</label>
         <div class="spoiler">
-          <table class="spoiler-options">
-            <tr>
-              <td class="table-half">
+          <div class="row">
+            <div class="col-md-6 plus-minus">
               <p class="small-title" style="color: #15983D;">Преимущества</p>
-              <hr>
+              <hr class="hr-half">
               <p>можно гибко строить и дорабатывать курс</p>
-              <hr>
+              <hr class="hr-half">
               <p>часть лекций можно не оцифровывать, а заменить веб-трансляцией, это привычная преподавательская деятельность, только в новом формате</p>
-            </td>
-            <td class="table-half">
+            </div>
+            <div class="col-md-6 plus-minus">
               <p class="small-title" style="color: #EE0011;">Недостатки</p>
-              <hr>
+              <hr class="hr-half">
               <p>нужно уметь создавать цифровые образовательные ресурсы, работать в приложениях</p>
-              <hr>
+              <hr class="hr-half">
               <p>нужно достаточно много времени для разработки учебных материалов, тестов, памяток, объявлений и потом сопровождения активностей студентов в курсе</p>
-            </td>
-          </tr>
-        </table>
+            </div>
+          </div>
         </div>
         
         <input type="checkbox"  id="spoiler2" /> 
         <label for="spoiler2">Используем готовый МООС</label>
         <div class="spoiler">
-          <table class="spoiler-options">
-            <tr>
-              <td class="table-half">
+          <p class="nb">! Обратите внимание: можно использовать МООС на разных платформах: НПОО, Coursera, stepik и т.п.</p>
+          <div class="row">
+            <div class="col-md-6 plus-minus">
               <p class="small-title" style="color: #15983D;">Преимущества</p>
-              <hr>
+              <hr class="hr-half">
               <p>не нужно тратить силы и ресурсы на создание контента и оценочных средств, контент уже прошел экспертизу качества</p>
-              <hr>
+              <hr class="hr-half">
               <p>учебная активность студентов задана курсом, техническая поддержка студентов обеспечивается платформой</p>
-            </td>
-            <td class="table-half">
+            </div>
+            <div class="col-md-6 plus-minus">
               <p class="small-title" style="color: #EE0011;">Недостатки</p>
-              <hr>
+              <hr class="hr-half">
               <p>нужно адаптировать свои вебинары / консультации под логику тематического плана МООС</p>
-              <hr>
+              <hr class="hr-half">
               <p>по теме вашего курса доступных МООС может не быть</p>
-            </td>
-          </tr>
-        </table>
-        <hr>
-        <p class="nb">! Обратите внимание: можно использовать МООС на разных платформах: НПОО, Coursera, stepik и т.п.</p>
+            </div>
+          </div>
         </div>
+
     </div>
   </div>
   <div class="entry">
