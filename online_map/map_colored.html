@@ -36,9 +36,7 @@
       clear: both;
       text-align: right;
     }
-    body .entries .entry:not(:first-child) {
-      margin-top: -60px;
-    }
+    body .entries .entry:not(:first-child) {margin-top: -60px;}
     body .entries .entry .title {
       font-size: 32px;
       margin-bottom: 12px;
@@ -48,44 +46,25 @@
     body .entries .entry .title:before {
       content: '';
       position: absolute;
-      width: 8px;
-      height: 8px;
+      width: 36px;
+      height: 36px;
       border: 4px solid #FA6B09;
       background-color: #FFFFFF;
       border-radius: 100%;
       top: 50%;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
-      right: -73px;
+      right: -87px;
       z-index: 1000;
     }
-    body .entries .entry .title.big:before {
-      width: 24px;
-      height: 24px;
-      -webkit-transform: translate(8px, -50%);
-              transform: translate(8px, -50%);
-    }
-    body .entries .entry .body {
-      color: #3F3F3F;
-    }
-    body .entries .entry .body p {
-      line-height: 1.4em;
-    }
+    body .entries .entry .body {color: #3F3F3F;}
+    body .entries .entry .body p {line-height: 1.4em;}
     body .entries .entry:nth-child(2n) {
       text-align: left;
       float: right;
     }
-    body .entries .entry:nth-child(2n) .title:before {
-      left: -63px;
-    }
-    body .entries .entry:nth-child(2n) .title.big:before {
-      -webkit-transform: translate(-8px, -50%);
-              transform: translate(-8px, -50%);
-    }
-
-    input[id^="spoiler"]{
-     display: none;
-    }
+    body .entries .entry:nth-child(2n) .title:before {left: -77px;}
+    input[id^="spoiler"]{display: none;}
     input[id^="spoiler"] + label {
       display: block;
       width: 200px;
@@ -101,14 +80,12 @@
       border: 1px solid #b91226;
       background-color: #ffcb30;
     }
-
     .smaller-spoiler{
         background-color: #ff3098 !important;
         color: #FFFFFF !important;
         border: 1px solid #b91226 !important;
 
     }
-
     input[id^="spoiler"] ~ .spoiler {
       width: 90%;
       height: 0;
@@ -127,7 +104,6 @@
       opacity: 1;
       padding: 10px;
     }
-
     table.spoiler-options{
       text-align: center;
       color: #505050;
@@ -136,49 +112,26 @@
       text-align: center !important;
       font-weight: bold;
     }
-
-    li {
-      text-align: left;
-    }
-
-    td {
-      padding: 15px;
-    }
+    li {text-align: left;}
+    td {padding: 15px;}
     td.table-half{
       width: 50%; 
       vertical-align: top;
       padding: 15px;
     }
-
-    .left-aligned{
-      text-align: left;
-    }
-
+    .left-aligned{text-align: left;}
     .small-title{
       font-size: 16px;
       font-weight: bold;
     }
-
     a[href^="htt"] {
       text-decoration: none;
       color: #0C5BB0;
     }
-
-    p.nb{
-      color: #EE0011;
-    }
-
-    .justify{
-      text-align: justify;
-    }
-
-    div.option-line-parent{
-      text-align:center;
-    }
-    div.option-line{
-      margin: auto;
-    }
-
+    p.nb{color: #EE0011;}
+    .justify{text-align: justify;}
+    div.option-line-parent{text-align:center;}
+    div.option-line{margin: auto;}
     a.one-option{
       border: 2px solid #FA6B09;
       padding: 10px;
@@ -188,25 +141,17 @@
       display: inline-block;
       background-color: #FFF2CB;
     }
-
     hr {
       border-style: dashed;
       padding-left: 30px;
       padding-right: 30px;
     }
-
     .only-option-line{
       margin-top: 0px;
       margin-bottom: 24px;
     }
-
-    .second-level{
-      border-color: #149BED !important;
-    }
-
-    .plus-minus{
-      text-align: center;
-    }
+    .second-level{border-color: #149BED !important;}
+    .plus-minus{text-align: center;}
     @media (min-width: 992px) {
       .col-md-6 {
         width: 50%;
@@ -214,9 +159,7 @@
         text-align: center;
       }
     }
-    .hr-half{
-      width: 60%;
-    }
+    .hr-half{width: 60%;}
   </style>
 </head>
 <body>
@@ -311,7 +254,7 @@
     </div>
   </div>
   <div class="entry">
-    <div class="title big">3 Проводим занятия</div>
+    <div class="title">3 Проводим занятия</div>
     <div class="body">
         <input type="checkbox"  id="spoiler4" /> 
         <label for="spoiler4" >Используем интерактивные лекции</label>
@@ -480,7 +423,7 @@
     </div>
   </div>
   <div class="entry">
-    <div class="title big">6 Начинаем учить студентов</div>
+    <div class="title">6 Начинаем учить студентов</div>
     <div class="body">
       <p>Когда вы заполните сайт дисциплины, студенты это увидят. </p>
       <p class="justify">Не лишним будет направить письмо-приветствие с объяснением правил работы в дисциплине, списком дедлайнов и описанием ближайших учебных мероприятий (через объявление в LMS письмо уходит всем студентам этой дисциплины автоматически).</p>
